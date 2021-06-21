@@ -13,8 +13,8 @@
             RoleName = roleName;
         }
 
-        public string Id { get; private set; }
+        public string Id { get; init; }
 
-        public string RoleName { get; private set; }
+        public string RoleName { get; init; }
     }
 }
