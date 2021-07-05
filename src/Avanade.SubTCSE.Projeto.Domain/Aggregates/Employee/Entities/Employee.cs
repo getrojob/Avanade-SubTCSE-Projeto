@@ -10,7 +10,8 @@ namespace Avanade.SubTCSE.Projeto.Domain.Aggregates.Employee.Entities
             DateTime birthday,
             bool active,
             decimal salary,
-            EmployeeRole.Entities.EmployeeRole employeeRole)
+            EmployeeRole.Entities.EmployeeRole employeeRole,
+            DateTime createat, DateTime updateat)
         {
             FirstName = firstName;
             SurName = surName;
@@ -18,6 +19,8 @@ namespace Avanade.SubTCSE.Projeto.Domain.Aggregates.Employee.Entities
             Active = active;
             Salary = salary;
             EmployeeRole = employeeRole;
+            CreateAt = createat;
+            UpdateAt = updateat;
         }
 
         public string FirstName { get; init; }

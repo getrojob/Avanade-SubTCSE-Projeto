@@ -15,6 +15,8 @@ namespace Avanade.SubTCSE.Projeto.Application.AutoMapperConfigs.Profiles.Employe
                         birthday: ctor.Aniversario,
                         active: ctor.Ativo,
                         salary: ctor.Salario,
+                        createat: ctor.CreateAt,
+                        updateat: ctor.UpdateAt,
                         employeeRole: res.Mapper.Map<Domain.Aggregates.EmployeeRole.Entities.EmployeeRole>(ctor.Cargo));
                 })
                 .ForAllOtherMembers(i => i.Ignore());
@@ -26,6 +28,8 @@ namespace Avanade.SubTCSE.Projeto.Application.AutoMapperConfigs.Profiles.Employe
                 .ForMember(dest => dest.Aniversario, opt => opt.MapFrom(src => src.Birthday))
                 .ForMember(dest => dest.Ativo, opt => opt.MapFrom(src => src.Active))
                 .ForMember(dest => dest.Salario, opt => opt.MapFrom(src => src.Salary))
+                .ForMember(dest => dest.CreateAt, opt => opt.MapFrom(src => src.CreateAt))
+                .ForMember(dest => dest.UpdateAt, opt => opt.MapFrom(src => src.UpdateAt))
                 .ForMember(dest => dest.Cargo, opt => opt.MapFrom(src => src.EmployeeRole))
                 .ForAllOtherMembers(i => i.Ignore());
         }
