@@ -26,6 +26,7 @@ namespace Avanade.SubTCSE.Projeto.Api.Controllers
             {
                 return BadRequest(string.Join('\n', item.ValidationResult.Errors));
             }
+
             return Ok();
         }
     }

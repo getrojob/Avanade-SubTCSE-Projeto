@@ -7,7 +7,7 @@ namespace Avanade.SubTCSE.Projeto.Infra.CrossCutting
     {
         public static void AddRegisterDependenciesInjections(this IServiceCollection services)
         {
-
+            
         }
     }
 }

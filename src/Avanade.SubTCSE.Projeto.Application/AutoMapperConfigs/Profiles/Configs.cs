@@ -12,6 +12,7 @@ namespace Avanade.SubTCSE.Projeto.Application.AutoMapperConfigs.Profiles
                 cfg.AllowNullCollections = true;
 
                 cfg.AddProfile<EmployeeRoleProfile>();
+
                 cfg.AddProfile<EmployeeProfile>();
             });
     }
