@@ -26,8 +26,6 @@ namespace Avanade.SubTCSE.Projeto.Api
         {
             services.AddControllers();
 
-            services.AddControllers();
-
             services.AddApiVersioning(
                 options =>
                 {
