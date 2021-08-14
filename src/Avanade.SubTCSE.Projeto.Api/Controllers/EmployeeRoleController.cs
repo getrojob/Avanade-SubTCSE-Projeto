@@ -49,8 +49,6 @@ namespace Avanade.SubTCSE.Projeto.Api.Controllers
         }
 
         [HttpGet(template: "{id}")]
-        [ProducesResponseType(typeof(EmployeeRoleDto), StatusCodes.Status200OK), Produces("application/json")]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetById(string id)
         {
             var item = await _employeeRoleAppService.GetById(id);
@@ -58,6 +56,14 @@ namespace Avanade.SubTCSE.Projeto.Api.Controllers
             return Ok(item);
         }
 
+        [HttpDelete(template: "{id}")]
+        [ProducesResponseType(typeof(EmployeeRoleDto), StatusCodes.Status200OK), Produces("application/json")]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> DeleteById(string id)
+        {
+            //TODO: Desafio
+            throw new System.Exception();
+        }
 
     }
 }
