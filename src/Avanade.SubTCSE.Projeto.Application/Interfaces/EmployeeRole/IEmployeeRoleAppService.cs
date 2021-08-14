@@ -8,6 +8,8 @@ namespace Avanade.SubTCSE.Projeto.Application.Interfaces.EmployeeRole
     public interface IEmployeeRoleAppService
     {
         Task<EmployeeRoleDto> AddEmployeeRoleAsync(EmployeeRoleDto employeeRoleDto);
-      
+        Task<List<EmployeeRoleDto>> FindAllEmployeeRoleAsync();
+
+        Task<EmployeeRoleDto> GetById(string id); //TODO: Generics
     }
 }

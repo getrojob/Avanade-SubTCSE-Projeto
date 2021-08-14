@@ -37,5 +37,20 @@ namespace Avanade.SubTCSE.Projeto.Application.Services.EmployeeRole
             return itemDto;
         }
 
+        public async Task<List<EmployeeRoleDto>> FindAllEmployeeRoleAsync()
+        {
+            var item = await _employeeRoleService.GetAllAsync();
+            
+            return _mapper.Map<List<Domain.Aggregates.EmployeeRole.Entities.EmployeeRole>,List<EmployeeRoleDto>>(item); 
+
+        }
+
+        public async Task<EmployeeRoleDto> GetById(string id)
+        {
+            var item = await _employeeRoleService.GetById(id);
+
+            return _mapper.Map<Domain.Aggregates.EmployeeRole.Entities.EmployeeRole, EmployeeRoleDto>(item);
+
+        }
     }
 }
