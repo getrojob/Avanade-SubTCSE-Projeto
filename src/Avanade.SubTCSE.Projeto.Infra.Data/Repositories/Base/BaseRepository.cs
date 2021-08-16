@@ -40,11 +40,13 @@ namespace Avanade.SubTCSE.Projeto.Infra.Data.Repositories.Base
             
             return result.FirstOrDefault(); 
         }
-        public async void DeleteByIdAsync(Tid id)
+        public async Task<TEntity> DeleteByIdAsync(Tid id)
         {
             var delFilter = Builders<TEntity>.Filter.Eq("_id", id);
-            await _collection.DeleteOneAsync(delFilter);
-        }
 
+            var result = await _collection.FindOneAndDeleteAsync(delFilter);
+
+            return result;
+        }
     }
 }

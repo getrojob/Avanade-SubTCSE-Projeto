@@ -61,8 +61,9 @@ namespace Avanade.SubTCSE.Projeto.Api.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> DeleteById(string id)
         {
-            //TODO: Desafio
-            throw new System.Exception();
+            var item = await _employeeRoleAppService.DeleteById(id);
+
+            return Ok(item);
         }
 
     }
