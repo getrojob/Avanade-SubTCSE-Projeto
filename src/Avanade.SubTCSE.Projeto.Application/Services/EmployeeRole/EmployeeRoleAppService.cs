@@ -50,7 +50,13 @@ namespace Avanade.SubTCSE.Projeto.Application.Services.EmployeeRole
             var item = await _employeeRoleService.GetById(id);
 
             return _mapper.Map<Domain.Aggregates.EmployeeRole.Entities.EmployeeRole, EmployeeRoleDto>(item);
+        }
 
+        public async Task<EmployeeRoleDto> DeleteById(string id)
+        {
+            var item = await _employeeRoleService.DeleteById(id);
+
+            return _mapper.Map<Domain.Aggregates.EmployeeRole.Entities.EmployeeRole, EmployeeRoleDto>(item);
         }
     }
 }

@@ -13,6 +13,8 @@ namespace Avanade.SubTCSE.Projeto.Domain.Base.Repository
 
         Task<List<TEntity>> FindAllAsync();
 
+        Task<TEntity> DelByIdAsync(Tid Id);
+
         //TODO: IEnumerable, IList, List
     }
 }
